@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <EditText
+        android:id="@+id/search_note"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/search_view_shape"
+        android:cursorVisible="true"
+        android:drawableLeft="@drawable/ic_search"
+        android:drawablePadding="12dp"
+        android:hint="@string/search_et"
+        android:paddingLeft="12dp"
+        android:singleLine="true"
+        android:textColor="@color/title_text_color"
+        android:textColorHint="@color/fontColor"
+        android:textCursorDrawable="@drawable/text_cursor"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toStartOf="@id/cancel_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/cancel_btn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="56dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="8dp"
+        android:background="@null"
+        android:gravity="center"
+        android:text="@string/cancle_btn"
+        android:textColor="@color/login_btn_light_color"
+        android:textSize="15dp"
+        app:layout_constraintStart_toEndOf="@id/search_note"
+        app:layout_constraintTop_toTopOf="@id/search_note" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/note_list_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="65dp"
+        android:background="#ffffff"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_note"
+        tools:listitem="@layout/recycler_view_notelist_item" />
+</androidx.constraintlayout.widget.ConstraintLayout>
