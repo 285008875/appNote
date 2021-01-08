@@ -25,7 +25,7 @@ public class RetrofitServiceManager {
     private static final int DEFAULT_READ_TIME = 30;
 
     private  final  OkHttpClient okHttpClient;
-    private static final String BASE_URL = "https://mainote.maimemo.com/";
+    private static final String BASE_URL = "hxxxxx";
     private final Retrofit retrofit;
 
     private RetrofitServiceManager() {
