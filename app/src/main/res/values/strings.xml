@@ -1,0 +1,33 @@
+<resources>
+    <string name="base_url" translatable="false">https://mainote.maimemo.com/api/</string>
+    <string name="app_name" translatable="false">MemoNote</string>
+    <string name="login_title_name" translatable="false">墨墨搜记</string>
+    <string name="username" translatable="false">请输入墨墨账号</string>
+    <string name="password" translatable="false">请输入密码</string>
+    <string name="log_in" translatable="false">登录</string>
+    <string name="logout" translatable="false">退出登录</string>
+    <string name="search_txt" translatable="false">搜索</string>
+    <string name="login_err" translatable="false">账号或密码错误</string>
+    <string name="Me">我</string>
+    <string name="secret">私</string>
+    <string name="create_note_title">创建搜记</string>
+    <string name="status_tv">状态</string>
+    <string name="title_of_create_note">我的搜记</string>
+    <string name="createnote_text">去创建你的第一个笔记吧</string>
+    <string name="cancle_btn">取消</string>
+    <string name="max_input_length_tip">输入字数超过上限50</string>
+    <string name="save_err">保存失败</string>
+    <string name="save_success">保存成功</string>
+    <string name="net_err">网络加载错误</string>
+    <string name="search_et">搜索</string>
+    <string name="preview_activity_title">搜记</string>
+    <string name="no_search_result">无搜索结果</string>
+    <string name="search_note">搜索</string>
+    <string name="private_rb">私有</string>
+    <string name="public_rb">公开</string>
+    <string name="create_note_tag_hint">请输入标签，示例：标签/标签</string>
+    <string name="create_note_content_hit">请输入搜记内容</string>
+    <string name="delete_note_item">删除</string>
+    <string name="me">me</string>
+
+</resources>

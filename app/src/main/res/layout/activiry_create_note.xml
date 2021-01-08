@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_color"
+        android:gravity="center"
+        android:theme="@style/ToolBarStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:titleTextAppearance="@style/Toolbar.TitleText">
+
+        <TextView
+            android:id="@+id/title_toolbar_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/create_note_title" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/status_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/status_tv"
+                    android:textColor="@color/search_result_font_color"
+                    android:textSize="15dp" />
+
+                <RadioGroup
+                    android:id="@+id/radio_group_status"
+                    android:layout_width="76dp"
+                    android:layout_height="22dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/private_radio"
+                        android:layout_width="38dp"
+                        android:layout_height="22dp"
+                        android:background="@drawable/left_radio"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="@string/private_rb"
+                        android:textColor="@color/login_btn_text_color"
+                        android:textSize="14dp"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <RadioButton
+                        android:id="@+id/public_radio"
+                        android:layout_width="39dp"
+                        android:layout_height="22dp"
+                        android:background="@drawable/right_radio"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="@string/public_rb"
+                        android:textColor="@color/login_btn_text_color"
+                        android:textSize="14dp"
+                        app:layout_constraintStart_toEndOf="@+id/radioButton3" />
+
+                </RadioGroup>
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view_line_of_bottom_status"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/view_baseLine" />
+
+            <EditText
+                android:id="@+id/note_tag_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="16dp"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:ems="10"
+                android:hint="@string/create_note_tag_hint"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="@color/title_text_color"
+                android:textColorHint="@color/fontColor"
+                android:textCursorDrawable="@drawable/text_cursor"
+                android:textSize="15dp"
+                android:theme="@style/EditTextStyle" />
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/note_tag_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:minHeight="68dp"
+                app:alignItems="flex_start"
+                app:flexDirection="row"
+                app:flexWrap="wrap"
+                app:justifyContent="flex_start" />
+
+            <View
+                android:id="@+id/view_line_of_bottom_tag"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/view_baseLine"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/note_tag_group"
+                app:layout_constraintVertical_bias="0.276" />
+
+            <EditText
+                android:id="@+id/note_content_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:gravity="top"
+                android:hint="@string/create_note_content_hit"
+                android:textColor="@color/title_text_color"
+                android:textColorHint="@color/fontColor"
+                android:textCursorDrawable="@drawable/text_cursor"
+                android:textSize="15dp"
+                android:theme="@style/EditTextStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
